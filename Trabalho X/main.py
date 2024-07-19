@@ -1,4 +1,5 @@
 import tkinter as tk
+from PIL import Image, ImageTk
 
 from controler.user_c import UsuarioController
 from controler.delete_c import DeleteController

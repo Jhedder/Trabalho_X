@@ -20,7 +20,7 @@ class StartView(tk.Frame):
     
 
     def load_image(self):
-        image = Image.open("C:/Users/182400232/Documents/Projetos-Python1/Trabalho X/Imagens/maxresdefault.jpg")
+        image = Image.open("C:/Users/182400232/Documents/Trabalho/Trabalho X/Imagens/maxresdefault.jpg")
         image = image.resize((780, 600), Image.LANCZOS)
         photo = ImageTk.PhotoImage(image)
         return photo

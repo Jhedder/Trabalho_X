@@ -24,7 +24,7 @@ class UsuarioView(tk.Frame):
     
 
     # Abre a imagem usando PIL (Pillow)
-    image = Image.open("C:/Users/182400232/Documents/Projetos-Python1/Trabalho X/Imagens/maxresdefault.jpg")
+    image = Image.open("C:/Users/182400232/Documents/Trabalho/Trabalho X/Imagens/maxresdefault.jpg")
 
     # Converte a imagem PIL para um objeto PhotoImage
     photo = ImageTk.PhotoImage(image)
