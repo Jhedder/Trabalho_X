@@ -9,20 +9,25 @@ from view.user_v import UsuarioView
 from view.delete_v import DeleteView
 from view.atualiza_v import AtualizaView
 from view.menu_v import MenuView
+from view.splash_v import SplashView
 from view.escolha_chefe_v import EscolhaView
+from controler.escolha_chefe_c import EscolhaController
 
 
 class MainApp(tk.Tk):
     def __init__(self):
         super().__init__()
-        
         self.title("Megaman X5")
-        MenuView(self).pack(fill=tk.BOTH, expand=True)
-        self.switch_frame(UsuarioView)
+        self.usuario_v = UsuarioView
+        self.atualiza_v = AtualizaView
+        self.splash_v = SplashView
+        self.menu_v = MenuView(self)
+        self.switch_frame(SplashView)
+        #self.switch_frame(UsuarioView)
    
     def switch_frame(self, frame_class):
         new_frame = frame_class(self)
-        if frame_class ==  UsuarioView:
+        if frame_class ==  EscolhaView:
             model =  UsuarioModel()
             UsuarioController(new_frame,model)
         elif frame_class == DeleteView:

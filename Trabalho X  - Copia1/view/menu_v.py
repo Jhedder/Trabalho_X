@@ -18,7 +18,6 @@ image_path = "C:/Users/182400232/Documents/Trabalho/Trabalho X  - Copia1/Imagens
 class MenuView(Frame):
     def __init__(self, parent):
         super().__init__(parent)
-        self.pack(fill=BOTH, expand=True)
         self.create_widgets()
 
     def opcao_selecionada(self, opcao):
