@@ -1,11 +1,10 @@
 import tkinter as tk
 from PIL import Image, ImageTk
 
-from controler.user_c import UsuarioController
+
 from controler.delete_c import DeleteController
 from controler.atualiza_c import AtualizaController
 from model.usuario_m import UsuarioModel
-from view.user_v import UsuarioView
 from view.delete_v import DeleteView
 from view.atualiza_v import AtualizaView
 from view.menu_v import MenuView
@@ -18,7 +17,7 @@ class MainApp(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title("Megaman X5")
-        self.usuario_v = UsuarioView
+        self.escolha_chefe_v = EscolhaView
         self.atualiza_v = AtualizaView
         self.splash_v = SplashView
         self.menu_v = MenuView(self)
@@ -29,7 +28,7 @@ class MainApp(tk.Tk):
         new_frame = frame_class(self)
         if frame_class ==  EscolhaView:
             model =  UsuarioModel()
-            UsuarioController(new_frame,model)
+            EscolhaController(new_frame,model)
         elif frame_class == DeleteView:
             model =  UsuarioModel()
             DeleteController(new_frame, model)

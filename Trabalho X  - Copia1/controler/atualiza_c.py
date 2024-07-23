@@ -7,24 +7,23 @@ class AtualizaController:
     def __init__(self, view:AtualizaView, model:UsuarioModel):
         self.view = view
         self.model = model
-        self.view.atualizar_button.config(command=self.atualizar_usuario)
-        self.carregar_usuarios()
+        self.view.atualizar_button.config(command=self.atualizar_chefe)
+        self.carregar_chefes()
 
-    def atualizar_usuario(self):
+    def atualizar_chefe(self):
         id = self.view.get_id()
-        nome = self.view.get_nome()
-        idade = self.view.get_idade()
-        if id and nome and idade.isdigit():
-            self.model.atualizar_usuario(id,nome,idade)
+
+        if id.isdigit():
+            self.model.atualizar_chefe(id)
             self.view.usuarios_listbox.delete(0,tk.END)
-            self.carregar_usuarios()
+            self.carregar_chefes()
         else:
             self.view.show_info()
 
-    def carregar_usuarios(self):
-        usuarios = self.model.selecionar_usuarios()#retorna uma lista de tuplas
-        for usuario in usuarios:
-            self.view.adicionar_usuario_lista(usuario)
+    def carregar_chefes(self):
+        chefe = self.model.selecionar_chefe()#retorna uma lista de tuplas
+        for chefe in chefe:
+            self.view.adicionar_chefe_lista(chefe)
 
 
 
