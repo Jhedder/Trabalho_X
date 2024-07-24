@@ -11,13 +11,13 @@ class AtualizaView(tk.Frame):
 
     def create_widgets(self):
         self.id_label = ttk.Label(self, text="ID:")
-        self.id_label.grid(row=0, column=2, padx=10, pady=5)
+        self.id_label.grid(row=0, column=0, padx=10, pady=5)
 
         self.id_entry = ttk.Entry(self)
-        self.id_entry.grid(row=0, column=3, padx=10, pady=5)
+        self.id_entry.grid(row=0, column=1, padx=10, pady=5)
 
         self.atualizar_button = ttk.Button(self, text="Atualizar Chefe")
-        self.atualizar_button.grid(row=2, column=0, pady=10, padx=10)
+        self.atualizar_button.grid(row=1, column=0, pady=10, padx=10)
 
         self.chefes_listbox = tk.Listbox(self)
         self.chefes_listbox.grid(row=3, column=0, columnspan=4, padx=10, pady=5, sticky="nsew")
@@ -30,6 +30,6 @@ class AtualizaView(tk.Frame):
         return id
 
     def adicionar_chefe_lista(self, chefe):
-        self.chefes_listbox.insert(tk.END, f"Id {chefe[0]} | (Nome / {chefe[1]})    (Fase / {chefe[2]}) poder | {chefe[3]}")
+        self.chefes_listbox.insert(tk.END, f"id {chefe[0]} | nome  {chefe[1]} | fase  {chefe[2]} | poder  {chefe[3]} |")
     def show_info(self):
         messagebox.showinfo("Os campos não podem estar vazios e o id deve ser digito.")

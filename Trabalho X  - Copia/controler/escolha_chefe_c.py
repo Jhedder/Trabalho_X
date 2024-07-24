@@ -14,7 +14,7 @@ class EscolhaController:
         id = self.view.get_id()
         if  id:
             self.model.inserir_chefe(id)
-            self.view.usuarios_listbox.delete(0, tk.END)
+            self.view.chefes_listbox.delete(0, tk.END)
             self.carregar_chefes()
 
     def carregar_chefes(self):

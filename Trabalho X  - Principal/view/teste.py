@@ -1,51 +1,51 @@
-import tkinter as tk
-from PIL import Image, ImageTk
+# import tkinter as tk
+# from PIL import Image, ImageTk
 
-# Crie a janela principal
-root = tk.Tk()
-
-
-# Caminho da imagem
-image_path = "C:/Users/182400232/Documents/Projetos-Python1/Trabalho X/Imagens/maxresdefault.jpg"
-
-# Carregue a imagem usando Pillow
-imagem = Image.open(image_path)
-imagem = ImageTk.PhotoImage(imagem)
-
-# Crie um widget Label para exibir a imagem
-w = tk.Label(root, image=imagem)
-w.imagem = imagem  # Mantenha uma referência para evitar coleta de lixo
-w.pack()
-
-# Inicie o loop do GUI
+# # Crie a janela principal
+# root = tk.Tk()
 
 
+# # Caminho da imagem
+# image_path = "C:/Users/182400232/Documents/Projetos-Python1/Trabalho X/Imagens/maxresdefault.jpg"
 
-# Função para carregar a imagem
-    def load_image():
-    # Carrega a imagem usando Pillow
-        image = Image.open("C:/Users/182400232/Documents/Projetos-Python1/Trabalho X/Imagens/maxresdefault.jpg")#tem que dar o caminho da imagem
-    # Redimensiona a imagem conforme necessário
-        image = image.resize((400, 400), Image.LANCZOS)
-    # Converte a imagem para um formato que o tkinter possa exibir
-        photo = ImageTk.PhotoImage(image)
-        return photo
+# # Carregue a imagem usando Pillow
+# imagem = Image.open(image_path)
+# imagem = ImageTk.PhotoImage(imagem)
 
-# Cria a janela principal
-    root = tk.Tk()
+# # Crie um widget Label para exibir a imagem
+# w = tk.Label(root, image=imagem)
+# w.imagem = imagem  # Mantenha uma referência para evitar coleta de lixo
+# w.pack()
 
-# Carrega a imagem
-    image = load_image()
+# # Inicie o loop do GUI
 
-# Cria a label com a imagem e o texto
-    label = tk.Label(root, image=image, compound="left")
-    label.pack()
 
-# Executa o loop principal do tkinter
-    root.mainloop()
 
-    def show_info(self):
-        messagebox.showinfo("Aviso!", "Os campos não podem estar vazios e a idade deve ser digito.")
+# # Função para carregar a imagem
+#     def load_image():
+#     # Carrega a imagem usando Pillow
+#         image = Image.open("C:/Users/182400232/Documents/Projetos-Python1/Trabalho X/Imagens/maxresdefault.jpg")#tem que dar o caminho da imagem
+#     # Redimensiona a imagem conforme necessário
+#         image = image.resize((400, 400), Image.LANCZOS)
+#     # Converte a imagem para um formato que o tkinter possa exibir
+#         photo = ImageTk.PhotoImage(image)
+#         return photo
+
+# # Cria a janela principal
+#     root = tk.Tk()
+
+# # Carrega a imagem
+#     image = load_image()
+
+# # Cria a label com a imagem e o texto
+#     label = tk.Label(root, image=image, compound="left")
+#     label.pack()
+
+# # Executa o loop principal do tkinter
+#     root.mainloop()
+
+#     def show_info(self):
+#         messagebox.showinfo("Aviso!", "Os campos não podem estar vazios e a idade deve ser digito.")
 
 
 
@@ -204,3 +204,46 @@ w.pack()
 #             self.usuarios_listbox.insert(tk.END, f"id {usuario[0]} | {usuario[1]} ({usuario[2]} anos)")
 #     def show_info(self):
 #             messagebox.showinfo("Aviso!", "Os campos não podem estar vazios e a idade deve ser digito.")
+
+
+
+# import tkinter as tk
+# from tkinter import ttk
+# from tkinter import messagebox
+# from PIL import Image, ImageTk
+
+
+# class EscolhaView(tk.Frame):
+#     def __init__(self, parent):
+#         super().__init__(parent)
+#         self.pack(fill=tk.BOTH, expand=True)
+#         self.create_widgets()
+#         self.master.geometry("700x980")
+#         self.create_widgets()
+    
+
+#     def create_widgets(self):
+
+#         self.id_label = ttk.Label(self, text="ID:")
+#         self.id_label.grid(row=0, column=0, padx=10, pady=10)
+
+#         self.id_entry = ttk.Entry(self)
+#         self.id_entry.grid(row=0, column=1, padx=10, pady=10)
+       
+#         self.adicionar_button = ttk.Button(self, text="Escolher")
+#         self.adicionar_button.grid(row=3, column=0, columnspan=2, pady=10)
+       
+#         self.chefes_listbox = tk.Listbox(self)
+#         self.chefes_listbox.grid(row=4, column=0, columnspan=2, padx=10, pady=5, sticky="nsew")
+       
+#         self.grid_rowconfigure(3, weight=1)
+#         self.grid_columnconfigure(1, weight=1)
+        
+#     def get_id(self):
+#         id = self.id_entry.get()
+#         return id
+
+#     def adicionar_chefe_lista(self, chefe):
+#         self.chefes_listbox.insert(tk.END, f"id {chefe[0]} | nome | {chefe[1]} fase | {chefe[2]} poder | {chefe[3]}")
+#     def show_info(self):
+#         messagebox.showinfo("Os campos não podem estar vazios e o id deve ser digito.")
