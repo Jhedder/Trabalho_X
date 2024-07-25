@@ -14,7 +14,6 @@ class SplashView(tk.Frame):
             print("Botão clicado!")
             self.destroy()
             self.parent.menu_v.pack()    
-            #self.parent.switch_frame(self.parent.usuario_v)
             
 
     def create_widgets(self):

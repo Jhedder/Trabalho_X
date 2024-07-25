@@ -37,10 +37,17 @@ class UsuarioModel:
         except mariadb.Error as e:
             print(f"Erro ao inserir chefe: {e}")
 
-    def selecionar_chefe(self):
+    def carregar_chefes(self):
         cursor = self.conn.cursor()
         cursor.execute('SELECT * FROM chefes')
         return cursor.fetchall()
+
+    def carregar_chefe(self,id):
+        cursor = self.conn.cursor()
+        cursor.execute('SELECT * FROM chefes where id = ?',(id,))
+        return cursor.fetchall()
+
+    
 
     def deletar_chefe(self, id):
         cursor = self.conn.cursor()

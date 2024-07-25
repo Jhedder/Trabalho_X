@@ -1,23 +1,27 @@
 from model.usuario_m import UsuarioModel
-from view.escolha_chefe_v import EscolhaView
+from view.chefeview_v import ChefeView
 import tkinter as tk
+from controler.chefe_c import ChefeController
 
 
 class EscolhaController:
-    def __init__(self, view:EscolhaView, model:UsuarioModel):
+    def __init__(self,parent, view, model:UsuarioModel):
+        self.parent= parent
         self.view = view
         self.model = model
-        self.view.adicionar_button.config(command=self.adicionar_chefe)
+        self.view.escolher_button.config(command=self.selecionar_chefe)
         self.carregar_chefes()
 
-    def adicionar_chefe(self):
+    def selecionar_chefe(self):
         id = self.view.get_id()
-        if  id:
-            self.model.inserir_chefe(id)
-            self.view.chefes_listbox.delete(0, tk.END)
-            self.carregar_chefes()
+        self.parent.switch_frame(ChefeView)
+        #self.parent.menu_v.destroy()
+        self.parent.chefe_c.id_chefe = id
+        self.parent.title("Escolha Chefes - Megaman X5")
+       
+        
 
     def carregar_chefes(self):
-        chefe = self.model.selecionar_chefe()#retorna uma lista de tuplas
-        for chefe in chefe:
+        chefes = self.model.carregar_chefes()#retorna uma lista de tuplas
+        for chefe in chefes:
             self.view.adicionar_chefe_lista(chefe)
