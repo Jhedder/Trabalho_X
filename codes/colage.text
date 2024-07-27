@@ -7,3 +7,14 @@ INSERT INTO chefes (nome, fase, poder) VALUES
 ('Dark Necrobat', 'Dark Necrobat Stage', 'Dark Hold'),
 ('Burn Dinorex', 'Burn Dinorex Stage', 'Ground Fire'),
 ('Spike Rosered', 'Spike Rosered Stage', 'Spike Ball');
+
+
+
+UPDATE chefes SET src_img = 'Trabalho X  - Principal/midia/imagens/Crescent Grizzly.jpg' WHERE nome = 'Crescent Grizzly';
+UPDATE chefes SET src_img = 'Trabalho X  - Principal/midia/imagens/Tidal Whale.jpg' WHERE nome = 'Tidal Whale';
+UPDATE chefes SET src_img = 'Trabalho X  - Principal/midia/imagens/Volt Kraken.jpg' WHERE nome = 'Volt Kraken';
+UPDATE chefes SET src_img = 'Trabalho X  - Principal/midia/imagens/Shining Firefly.jpg' WHERE nome = 'Shining Firefly';
+UPDATE chefes SET src_img = 'Trabalho X  - Principal/midia/imagens/Spiral Pegasus.jpg' WHERE nome = 'Spiral Pegasus';
+UPDATE chefes SET src_img = 'Trabalho X  - Principal/midia/imagens/Dark Necrobat.jpg' WHERE nome = 'Dark Necrobat';
+UPDATE chefes SET src_img = 'Trabalho X  - Principal/midia/imagens/BurnDinorex.jpg' WHERE nome = 'Burn Dinorex';
+UPDATE chefes SET src_img = 'Trabalho X  - Principal/midia/imagens/Spike RoseRed.jpg' WHERE nome = 'Spike Rosered';

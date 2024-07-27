@@ -1,9 +1,7 @@
 import tkinter as tk
 from controler.delete_c import DeleteController
-from controler.atualiza_c import Show_bosses_controller
 from model.usuario_m import UsuarioModel
 from view.delete_v import DeleteView
-from view.show_bosses_v import ShowBossesView
 from view.escolha_chefe_v import EscolhaView
 
 from PIL import Image, ImageTk
@@ -21,16 +19,12 @@ class MenuView(Frame):
     def opcao_selecionada(self, opcao):
         if opcao == "1":
             self.master.switch_frame(EscolhaView)
-            self.master.title("Novo Jogo")
-        elif opcao == "2":
-            self.master.switch_frame(ShowBossesView)
-            self.master.title("Continuar Jogo")
+            self.master.title("Ver chefes")
         
 
     def criar_menu_dropdown(self, master):
         menu_dropdown = Menu(master, tearoff=0)
-        menu_dropdown.add_command(label="Novo Jogo", command=lambda: self.opcao_selecionada("1"))
-        menu_dropdown.add_command(label="Continuar Jogo", command=lambda: self.opcao_selecionada("2"))
+        menu_dropdown.add_command(label="Ver chefes", command=lambda: self.opcao_selecionada("1"))
         
         return menu_dropdown
 

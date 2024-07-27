@@ -14,9 +14,10 @@ class EscolhaController:
 
     def selecionar_chefe(self):
         id = self.view.get_id()
+        self.parent.menu_v.pack_forget()
         self.parent.switch_frame(ChefeView)
-        #self.parent.menu_v.destroy()
-        self.parent.chefe_c.id_chefe = id
+        self.parent.chefe_c.get_chefe_id(id)
+        self.parent.chefe_c.carregar_view()
         self.parent.title("Escolha Chefes - Megaman X5")
        
         
