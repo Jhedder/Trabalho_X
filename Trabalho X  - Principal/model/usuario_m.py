@@ -2,7 +2,8 @@ import mariadb
 import sys
 
 class UsuarioModel:
-    def __init__(self, db_name='jhedder_db', user='root', password='', host='localhost', port=3306):
+    def __init__(self, db_name='jadder_db', user='root', password='', host='localhost', port=3306):
+    #def __init__(self, db_name='jhedder_db', user='root', password='', host='localhost', port=3306):
         try:
             self.conn = mariadb.connect(
                 user=user,
@@ -24,7 +25,8 @@ class UsuarioModel:
                 id INT AUTO_INCREMENT PRIMARY KEY,
                 nome VARCHAR(100) NOT NULL,
                 fase VARCHAR(100),
-                poder VARCHAR(100)
+                poder VARCHAR(100),
+                src_img VARCHAR(200)       
             )
         ''')
         self.conn.commit()

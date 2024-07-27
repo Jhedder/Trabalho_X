@@ -1,0 +1,9 @@
+INSERT INTO chefes (nome, fase, poder) VALUES
+('Crescent Grizzly', 'Crescent Grizzly Stage', 'Crescent Shot'),
+('Tidal Whale', 'Tidal Whale Stage', 'Goo Shaver'),
+('Volt Kraken', 'Volt Kraken Stage', 'Tri-Thunder'),
+('Shining Firefly', 'Shining Firefly Stage', 'F-Laser'),
+('Spiral Pegasus', 'Spiral Pegasus Stage', 'W-Shredder'),
+('Dark Necrobat', 'Dark Necrobat Stage', 'Dark Hold'),
+('Burn Dinorex', 'Burn Dinorex Stage', 'Ground Fire'),
+('Spike Rosered', 'Spike Rosered Stage', 'Spike Ball');

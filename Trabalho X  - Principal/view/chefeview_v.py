@@ -1,6 +1,5 @@
 import tkinter as tk
 from PIL import Image, ImageTk
-
 class ChefeView(tk.Frame):
     def __init__(self, parent):
         super().__init__(parent)
@@ -8,42 +7,11 @@ class ChefeView(tk.Frame):
         self.pack(fill=tk.BOTH, expand=True)
         min_width, min_height = 600, 800
         parent.minsize(min_width, min_height)
-        # Criar um canvas para o fundo com gradiente
         canvas = tk.Canvas(parent, width=min_width, height=min_height)
         canvas.pack(fill=tk.BOTH, expand=True)
-        self.create_gradient_background(canvas,min_width,min_height)
-        #self.center_window(self.master,min_width,min_height)
-        self.atualizar_imagem()
+        #self.create_gradient_background(canvas,min_width,min_height)
         self.create_widgets()
-    def create_gradient_background(self,canvas, width, height):
-        # Definir cores para o gradiente
-        color1 = '#FF6347'  # Tomato
-        color2 = '#8B0000'  # DarkRed
 
-        # Criar gradiente vertical no canvas
-        num_rectangles = 100
-        for i in range(num_rectangles):
-            # Interpolar entre color1 e color2
-            color = '#{:02x}{:02x}{:02x}'.format(
-                int((num_rectangles - i) * int(color1[1:3], 16) + i * int(color2[1:3], 16)) // num_rectangles,
-                int((num_rectangles - i) * int(color1[3:5], 16) + i * int(color2[3:5], 16)) // num_rectangles,
-                int((num_rectangles - i) * int(color1[5:], 16) + i * int(color2[5:], 16)) // num_rectangles
-            )
-            canvas.create_rectangle(0, i * (height // num_rectangles), width, (i + 1) * (height // num_rectangles), fill=color, outline="")
-
-    # Função para centralizar a janela na tela
-    # def center_window(self,window, width, height):
-    #     screen_width = window.winfo_screenwidth()
-    #     screen_height = window.winfo_screenheight()
-    #     x = (screen_width // 2) - (width // 2)
-    #     y = (screen_height // 2) - (height // 2)
-    #     window.geometry(f'{width}x{height}+{x}+{y}')
-
-    # Função para atualizar a imagem (substitua com sua lógica de atualização)
-    def atualizar_imagem(self):
-        # Aqui você pode implementar a lógica para atualizar a imagem
-        # Por enquanto, vou manter a mesma imagem apenas para demonstração
-        pass
     def create_widgets(self):
         # Criar a janela principal
         self.parent.title("Burn Dinorex - Mega Man X5")
@@ -57,11 +25,9 @@ class ChefeView(tk.Frame):
         canvas = tk.Canvas(self, width=min_width, height=min_height)
         canvas.pack(fill=tk.BOTH, expand=True)
 
-        # Criar o fundo com gradiente
-        self.create_gradient_background(canvas, min_width, min_height)
 
         # Carregar e redimensionar a imagem do Magma Dragoon
-        self.image_path = "midia/imagens/BurnDinorex.jpg"  # Coloque o caminho da sua imagem aqui
+        self.image_path = "Trabalho X  - Principal\midia\imagens\BurnDinorex.jpg" 
         original_image = Image.open(self.image_path)
         resized_image = original_image.resize((400, 400))
         photo = ImageTk.PhotoImage(resized_image)
@@ -86,11 +52,11 @@ class ChefeView(tk.Frame):
         text_label.place(x=25, y=520)  # Posição relativa ao canvas
 
         # Criar um botão para atualizar a imagem
-        atualizar_button = tk.Button(self, text="Atualizar Chefe", command=self.atualizar_imagem)
-        atualizar_button.place(x=250, y=700)  # Posição relativa ao canvas
+        self.escolher_button = tk.Button(self, text="Atualizar Chefe")
+        self.escolher_button.place(x=250, y=700)  # Posição relativa ao canvas
 
         # Centralizar a janela na tela
         #self.center_window(self, min_width, min_height)
 
         # Rodar o loop principal
-        self.mainloop()
+       

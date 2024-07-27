@@ -1,10 +1,10 @@
 from model.usuario_m import UsuarioModel
-from view.atualiza_v import AtualizaView
+from view.show_bosses_v import ShowBossesView
 import tkinter as tk
 
 
-class AtualizaController:
-    def __init__(self, view:AtualizaView, model:UsuarioModel):
+class Show_bosses_controller:
+    def __init__(self, view:ShowBossesView, model:UsuarioModel):
         self.view = view
         self.model = model
         self.view.atualizar_button.config()

@@ -1,9 +1,9 @@
 import tkinter as tk
 from controler.delete_c import DeleteController
-from controler.atualiza_c import AtualizaController
+from controler.atualiza_c import Show_bosses_controller
 from model.usuario_m import UsuarioModel
 from view.delete_v import DeleteView
-from view.atualiza_v import AtualizaView
+from view.show_bosses_v import ShowBossesView
 from view.escolha_chefe_v import EscolhaView
 
 from PIL import Image, ImageTk
@@ -11,7 +11,7 @@ from tkinter import Menu, Menubutton, Frame, BOTH, RAISED
 
 
 # Definindo o caminho da imagem (ajuste conforme necessário)
-image_path = "C:/Users/182400232/Documents/Trabalho/Trabalho X  - Principal/midia/imagens/Rockman_X5.webp"
+image_path = "Trabalho X  - Principal\midia\imagens\Rockman_X5.webp"
 
 class MenuView(Frame):
     def __init__(self, parent):
@@ -23,7 +23,7 @@ class MenuView(Frame):
             self.master.switch_frame(EscolhaView)
             self.master.title("Novo Jogo")
         elif opcao == "2":
-            self.master.switch_frame(AtualizaView)
+            self.master.switch_frame(ShowBossesView)
             self.master.title("Continuar Jogo")
         
 
