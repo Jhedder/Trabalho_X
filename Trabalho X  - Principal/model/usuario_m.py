@@ -24,7 +24,8 @@ class UsuarioModel:
                 id INT AUTO_INCREMENT PRIMARY KEY,
                 nome VARCHAR(100) NOT NULL,
                 fase VARCHAR(100),
-                poder VARCHAR(100)
+                poder VARCHAR(100),
+                url_img VARCHAR(255)
             )
         ''')
         self.conn.commit()

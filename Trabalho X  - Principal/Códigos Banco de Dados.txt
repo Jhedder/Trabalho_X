@@ -1,0 +1,10 @@
+CREATE TABLE chefes (id INT AUTO_INCREMENT PRIMARY KEY, nome VARCHAR(100) NOT NULL, fase VARCHAR(100), poder VARCHAR(100), url_img VARCHAR(255))
+
+INSERT INTO chefes (nome, fase, poder, url_img) VALUES ('Burn Dinorex','Magma Stage','Fogo Terrestre','midia/imagens/BurnDinorex.jpg');
+INSERT INTO chefes (nome, fase, poder, url_img) VALUES ('Spiral Pegasus','Reploid Airforce Stage','Espiral De Asa','midia/imagens/Spiral Pegasus.jpg');
+INSERT INTO chefes (nome, fase, poder, url_img) VALUES ('Dark Necrobat','Planetarium Stage','Onda Negra','midia/imagens/Dark Necrobat.jpg');
+INSERT INTO chefes (nome, fase, poder, url_img) VALUES ('Spike Rosered','Jungle Stage','Clone','midia/imagens/Spike Rosered.jpg');
+INSERT INTO chefes (nome, fase, poder, url_img) VALUES ('Shining Firefly','Laser Institute Stage','Flash Laser','midia/imagens/Shining Firefly.jpg');
+INSERT INTO chefes (nome, fase, poder, url_img) VALUES ('Volt Kraken','Super Electromagnetic Lab Stage','Tri Trovao','midia/imagens/Volt Kraken.jpg');
+INSERT INTO chefes (nome, fase, poder, url_img) VALUES ('Tidal Whale','Deep-Sea Submarine Stage','Ice Block A e B','midia/imagens/Tidal Whale.jpg');
+INSERT INTO chefes (nome, fase, poder, url_img) VALUES ('Crescent Grizzly','Runaway Truck Stage','Crescent Shot','midia/imagens/Crescent Grizzly.jpg');
